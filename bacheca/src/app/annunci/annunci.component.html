@@ -1,0 +1,12 @@
+<div *ngFor="let annuncio of annunci" class="border border-primary m-5 p-3 rounded annuncio">
+
+  <h2 class="d-inline-block">{{annuncio.nome}}</h2> di <h4 class="d-inline-block">{{annuncio.username}}</h4><h4 class="float-right">€{{annuncio.prezzo}}</h4>
+  <h5 class="font-weight-normal">descrizione: {{annuncio.descrizione}}</h5>
+  <h6 class="font-weight-normal">{{annuncio.data}}</h6>
+
+  <div *ngFor="let commento of annuncio.commenti" class="border border-light rounded m-1 p-2 commento">
+      <h5 class="d-inline-block"><b>{{commento.username}}</b></h5>
+      <p class="d-inline-block ml-4">{{commento.testo}}</p>
+  </div>
+
+</div>
